@@ -117,7 +117,7 @@ export class Pattern {
   }
 
   isValidAtIndex(char: string, index: number) {
-    return this.formatCharacters[this.pattern[index]].validate(char);
+    return this.isEditableIndex(index) && this.formatCharacters[this.pattern[index]].validate(char)
   }
 
   transform(char: string, index: number) {
